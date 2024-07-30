@@ -6,6 +6,19 @@
 	scroll-behavior: smooth;
 }
 
+div,
+ul,
+nav,
+header,
+footer,
+a,
+li,
+label,
+body {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	background-color: var(--nav-bg-color);
 	font-family: sans-serif;
@@ -13,3 +26,114 @@ body {
 }
 
 /*------ HEADER SECTION ------*/
+.header {
+	background-color: var(--nav-bg-color);
+	color: var(--nav-font-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	z-index: 10;
+	font-size: 1.25rem;
+	background-color: var(--nav-font-color);
+	border: 2px solid var(--nav-bg-color);
+}
+
+.header__open-nav-button {
+	color: var(--nav-font-color);
+	font-size: 1.25rem;
+	position: absolute;
+	right: 10px;
+}
+
+.header__checkbox {
+	display: none;
+}
+
+.header__nav {
+	display: none;
+	background-color: var(--nav-font-color);
+	position: absolute;
+	width: 40vw;
+	z-index: -1;
+	justify-content: center;
+}
+
+.header__nav-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.header__checkbox:checked ~ .header__nav {
+	display: flex;
+}
+
+.header__logo-container {
+	display: flex;
+	align-items: center;
+	background-color: var(--nav-bg-color);
+	padding-right: 15px;
+	border: 2px solid var(--nav-font-color);
+}
+
+.header__logo {
+	width: 6rem;
+	border-radius: 15px;
+	margin: 10px;
+}
+
+.header__empresa {
+	font-family: "Audiowide", sans-serif;
+	font: 400;
+	font-style: normal;
+	font-size: 1.2rem;
+}
+
+.header__nav-item {
+	list-style: none;
+	border-radius: 15px;
+}
+
+.header__nav-item a {
+	color: var(--nav-bg-color);
+	text-decoration: none;
+	font: 1.25rem;
+	font-weight: 600;
+}
+
+.header__nav-item:hover {
+	background-color: var(--nav-hover-bg-color);
+}
+
+.header__nav-item a:hover {
+	color: var(--nav-font-color);
+}
+
+/*------ HEADER QUERIES ------*/
+@media screen and (min-width: 600px) {
+	.header__nav {
+		display: block;
+		height: auto;
+		width: auto;
+		justify-content: space-between;
+		background-color: var(--nav-font-color);
+		color: var(--nav-bg-color);
+		position: static;
+		padding-right: 10px;
+	}
+
+	.header__nav-list {
+		flex-direction: row;
+		height: auto;
+		width: auto;
+	}
+
+	.header__open-nav-button {
+		display: none;
+	}
+
+	.header__nav-item {
+		padding: 5px 15px;
+	}
+}
