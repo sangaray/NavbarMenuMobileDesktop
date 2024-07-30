@@ -1,0 +1,15 @@
+* {
+	--nav-bg-color: #101632;
+	--nav-font-color: #97aafd;
+	--nav-hover-bg-color: #10163298;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--nav-bg-color);
+	font-family: sans-serif;
+	color: var(--nav-font-color);
+}
+
+/*------ HEADER SECTION ------*/
